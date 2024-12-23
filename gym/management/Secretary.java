@@ -147,11 +147,6 @@ public class Secretary extends Person {
         if (flag == 0) {
             session.getParticipants().add(client);
             client.setBalance(client.getBalance() - session.getPrice());
-//            for(Person person1: Person.getAllPerson()){
-//                if(person1.getID()==client.getID()){
-//                    person1.setBalance(client.getBalance());
-//                }
-//            }
             gymBalance += session.getPrice();
             String s = "Registered client: " + client.getName() + " to session: " + session.getSessionType() + " on " + toLocalTime(session.getDate()) + " for price: " + session.getPrice();
             HistoryActions.addAction(s);
@@ -224,11 +219,6 @@ public class Secretary extends Person {
         checkAccess(hasAccess);
         for (Instructor instructor : instructors) {
             instructor.setBalance(instructor.getBalance()+((instructor.getSalary()) * (instructor.getCountSession())));
-//            for(Person person1: Person.getAllPerson()){
-//                if(person1.getID()==instructor.getID()){
-//                    person1.setBalance(instructor.getBalance());
-//                }
-//            }
             gymBalance -= ((instructor.getSalary()) * (instructor.getCountSession()));
         }
         this.setBalance(this.getBalance()+salary);

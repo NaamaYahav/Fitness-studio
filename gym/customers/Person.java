@@ -13,7 +13,6 @@ public class Person {
     private String birthDate;
     final private int ID;
     private static int adder; // Counter to generate unique IDs
-    private static ArrayList<Person> allPerson=new ArrayList<>(); // List of all registered persons
     /**
      * Constructs a new Person with the specified details.
      *
@@ -28,7 +27,6 @@ public class Person {
         this.gender=gender;
         this.birthDate=date;
         this.ID= 1110+ ++adder; // Generate a unique ID
-        allPerson.add(this); // Add to the global list of persons
     }
     /**
      * Constructs a new Person by copying details from another Person object.
@@ -40,16 +38,9 @@ public class Person {
         this.balance=person.balance;
         this.gender=person.gender;
         this.birthDate=person.birthDate;
-        this.ID= person.ID; // Keep the same ID
-        allPerson.add(this); // Add to the global list of persons
+        this.ID= person.ID; // Keep the same I
+    }
 
-    }
-    /**
-     * @return a list of all Person objects.
-     */
-    public static ArrayList<Person> getAllPerson(){
-        return allPerson;
-    }
     /**
      * @return the name of the person.
      */
