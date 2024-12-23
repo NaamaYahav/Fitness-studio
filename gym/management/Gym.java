@@ -7,39 +7,65 @@ import gym.management.Sessions.Session;
 
 import java.util.ArrayList;
 import java.util.Set;
-
+/**
+ * This class represents a Gym management system. It is implemented as a singleton.
+ */
 public class Gym {
-    private String name;
-    private static Gym instance;
-    private Secretary currentSecretary;
+    private String name; // Name of the gym
+    private static Gym instance; // Singleton instance of the Gym
+    private Secretary currentSecretary; // Current secretary working at the gym
 
-    public Gym() {
+    /**
+     * Private constructor to prevent direct instantiation.
+     */
+    private Gym() {
     }
-
+    /**
+     * Returns the singleton instance of the Gym. If it doesn't exist, it creates a new one.
+     *
+     * @return the singleton instance of Gym
+     */
     public static Gym getInstance() {
         if (instance == null) {
             instance = new Gym();
         }
         return instance;
     }
-
+    /**
+     * Sets the name of the gym.
+     *
+     * @param name the name of the gym
+     */
     public void setName(String name) {
         this.name = name;
     }
-
+    /**
+     * Assigns a new secretary to the gym. If a secretary already exists, their access is revoked.
+     *
+     * @param p      the person to be assigned as secretary
+     * @param salary the monthly salary of the secretary
+     */
     public void setSecretary(Person p, int salary) {
         if (getSecretary() != null) {
-            getSecretary().setAccess(false);
+            getSecretary().setAccess(false); // Revoke access for the previous secretary
         }
         this.currentSecretary = new Secretary(p, salary);
         String s = "A new secretary has started working at the gym: " + p.getName();
-        HistoryActions.addAction(s);
+        HistoryActions.addAction(s); // Log the action
     }
-
+    /**
+     * Retrieves the current secretary of the gym.
+     *
+     * @return the current Secretary object
+     */
     public Secretary getSecretary() {
         return this.currentSecretary;
     }
-
+    /**
+     * Generates a string representation of the gym, including details of the gym, secretary, clients, employees, and sessions.
+     *
+     * @return a string containing all gym details
+     */
     @Override
     public String toString() {
         String gymData = "Gym Name: " + name + "\n" +
