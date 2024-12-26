@@ -1,7 +1,6 @@
 package gym.customers;
 
 import gym.management.Member;
-import gym.management.Sessions.Session;
 
 import java.util.ArrayList;
 import java.util.List;

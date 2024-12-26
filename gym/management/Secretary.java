@@ -227,8 +227,6 @@ public class Secretary extends Person {
         HistoryActions.addAction(s);
     }
     /**
-     * Retrieves the current gym balance.
-     *
      * @return The gym balance.
      */
     public int getGymBalance() {
@@ -244,35 +242,27 @@ public class Secretary extends Person {
         }
     }
     /**
-     * Retrieves the salary of the secretary.
-     *
      * @return The salary of the secretary.
      */
     public int getSalary() {
         return this.salary;
     }
     /**
-     * Retrieves the list of gym members.
-     *
      * @return A list of clients registered to the gym.
      */
-    public List<Client> getMembers() {
+    protected List<Client> getMembers() {
         return members;
     }
     /**
-     * Retrieves the list of gym instructors.
-     *
      * @return A list of instructors working at the gym.
      */
-    public List<Instructor> getInstructors() {
+    protected List<Instructor> getInstructors() {
         return instructors;
     }
     /**
-     * Retrieves the list of gym sessions.
-     *
      * @return A list of sessions of the gym.
      */
-    public ArrayList<Session> getAllSessions() {
+    protected ArrayList<Session> getAllSessions() {
         return allSession;
     }
 

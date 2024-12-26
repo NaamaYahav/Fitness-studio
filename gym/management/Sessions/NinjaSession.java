@@ -1,10 +1,8 @@
 package gym.management.Sessions;
 
-import gym.customers.Person;
 import gym.management.ForumType;
 import gym.management.Instructor;
-
-import java.util.List;
+import gym.management.Session;
 
 public class NinjaSession extends Session {
     private final int price=150;

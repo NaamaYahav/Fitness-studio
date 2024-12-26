@@ -1,14 +1,9 @@
-package gym.management.Sessions;
-import gym.Exception.DuplicateClientException;
-import gym.Exception.InstructorNotQualifiedException;
+package gym.management;
 import gym.customers.Client;
-import gym.customers.Person;
-import gym.management.ForumType;
-import gym.management.Instructor;
+import gym.management.Sessions.*;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 
 public abstract class Session {
@@ -49,7 +44,7 @@ public abstract class Session {
         return this.date;
     }
 
-    public List<Client> getParticipants(){
+    protected List<Client> getParticipants(){
         return this.participants;
     }
     public abstract int getNumOfParticipants();

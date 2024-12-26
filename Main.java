@@ -24,7 +24,6 @@ public class Main {
         gym.setSecretary(p1, 9000);
 
         Secretary gymSecretary = gym.getSecretary();
-
         Client c1 = gymSecretary.registerClient(p2);
         Client c2 = gymSecretary.registerClient(p3);
         Client c3 = gymSecretary.registerClient(p4);
@@ -32,7 +31,6 @@ public class Main {
         Client c5 = gymSecretary.registerClient(p6);
         Client c6 = gymSecretary.registerClient(p7);
         Client c7 = gymSecretary.registerClient(p8);
-
         try {
             Client c8 = gymSecretary.registerClient(p9);
         } catch (InvalidAgeException e) {
@@ -58,7 +56,6 @@ public class Main {
         Instructor i1 = gymSecretary.hireInstructor(p4, 70, new ArrayList<>(Arrays.asList(SessionType.ThaiBoxing, SessionType.MachinePilates)));
         Instructor i2 = gymSecretary.hireInstructor(p5, 90, new ArrayList<>(Arrays.asList(SessionType.ThaiBoxing, SessionType.Pilates, SessionType.MachinePilates)));
         Instructor i3 = gymSecretary.hireInstructor(p6,50, new ArrayList<>(Arrays.asList(SessionType.Pilates, SessionType.Ninja)));
-
         Session s1 = gymSecretary.addSession(SessionType.Pilates, "23-01-2025 10:00", ForumType.All, i2);
         Session s2 = gymSecretary.addSession(SessionType.MachinePilates, "23-10-2024 08:00", ForumType.Female, i1);
         Session s3 = gymSecretary.addSession(SessionType.Pilates, "25-01-2025 09:30", ForumType.Seniors, i3);

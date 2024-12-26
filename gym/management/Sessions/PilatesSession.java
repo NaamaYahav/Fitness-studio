@@ -1,12 +1,10 @@
 package gym.management.Sessions;
 
-import gym.customers.Person;
 import gym.management.ForumType;
 import gym.management.Instructor;
+import gym.management.Session;
 
-import java.util.List;
-
-public class PilatesSession extends Session{
+public class PilatesSession extends Session {
     private final int price=60 ;
     private final int numOfParticipants= 30;
 

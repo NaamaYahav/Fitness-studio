@@ -3,10 +3,9 @@ package gym.management;
 import gym.customers.Age;
 import gym.customers.Client;
 import gym.customers.Person;
-import gym.management.Sessions.Session;
 
 import java.util.ArrayList;
-import java.util.Set;
+
 /**
  * This class represents a Gym management system. It is implemented as a singleton.
  */
