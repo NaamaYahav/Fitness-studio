@@ -2,7 +2,6 @@ package gym.management;
 
 import gym.customers.Age;
 import gym.customers.Client;
-import gym.customers.Person;
 
 import java.util.ArrayList;
 

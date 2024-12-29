@@ -1,6 +1,7 @@
 package gym.customers;
 
 import gym.management.Member;
+import gym.management.Person;
 
 import java.util.ArrayList;
 import java.util.List;

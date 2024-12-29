@@ -1,6 +1,7 @@
-package gym.customers;
+package gym.management;
 
-import java.util.ArrayList;
+import gym.customers.Gender;
+
 /**
  * Represents a person in the gym system.
  * Each person has a unique ID, name, balance, gender, and birth date.
@@ -21,6 +22,7 @@ public class Person {
      * @param gender    the gender of the person.
      * @param date      the birth date of the person in "dd-MM-yyyy" format.
      */
+
     public Person(String name, int balance, Gender gender, String date) {
         this.name= name;
         this.balance[0]=balance;
@@ -70,7 +72,7 @@ public class Person {
      *
      * @param balance the new balance to set.
      */
-    public void setBalance(int balance){
+    protected void setBalance(int balance){
         this.balance[0]=balance;
     }
     /**

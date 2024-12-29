@@ -1,6 +1,7 @@
 package gym.customers;
 
-import java.util.ArrayList;
+import gym.management.Person;
+
 import java.util.List;
 /**
  * The IsRegisted class provides utility methods to check if a person is already registered as a client.
